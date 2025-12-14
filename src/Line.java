@@ -8,12 +8,12 @@ public class Line {
         this.p2 = p2;
     }
 
-    public void calculateLength() {
+    public double calculateLength() {
         this.length = Math.sqrt(
                 Math.pow(p2.x - p1.x, 2) +
                         Math.pow(p2.y - p1.y, 2)
         );
 
-        System.out.println("The length of the line is: " + this.length);
+        return length;
     }
 }

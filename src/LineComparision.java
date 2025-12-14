@@ -1,31 +1,25 @@
 import java.util.Scanner;
 
-public class LineComparision {
+class LineComparison {
+
     public static void main(String[] args) {
-        System.out.println("Welcome to the Line Comparision problem");
+        System.out.println("Welcome to Line Comparison Computation Program");
 
-        Line l1 = new Line(getPoint(), getPoint());
-        l1.calculateLength();
-        System.out.println("Length of line 1: " + l1.length);
+        Line line = new Line(getPoint(), getPoint());
+        double length = line.calculateLength();
 
-        Line l2 = new Line(getPoint(), getPoint());
-        l2.calculateLength();
-        System.out.println("Length of line 2: " + l2.length);
+        System.out.println("Length of the line is: " + length);
 
-        if (l1.length > l2.length) {
-            System.out.println("Line 1 is longer than Line 2");
-        } else if (l1.length < l2.length) {
-            System.out.println("Line 2 is longer than Line 1");
-        } else {
-            System.out.println("Both lines are equal in length");
-        }
+        Line line2=new Line(getPoint(),getPoint());
+        length=line2.calculateLength();
+        System.out.println("Length of the line 2 is: " + length);
     }
 
     public static Point getPoint() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter x coordinate:");
+        System.out.println("Enter x coordinate:");
         double x = sc.nextDouble();
-        System.out.println("enter y coordinate:");
+        System.out.println("Enter y coordinate:");
         double y = sc.nextDouble();
         return new Point(x, y);
     }
