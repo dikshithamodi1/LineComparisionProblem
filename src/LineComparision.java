@@ -20,6 +20,16 @@ class LineComparison {
         }else{
             System.out.println("The two lines are not the same");
         }
+
+        //uc3
+        int result=line.compareTo(line2);
+        if(result>0){
+            System.out.println("Line 1 is longer than the Line 2");
+        } else if (result<0) {
+            System.out.println("Line 2 is shorter than the Line 1");
+        }else{
+            System.out.println("Line 1 is equal to the Line 2");
+        }
     }
 
     public static Point getPoint() {

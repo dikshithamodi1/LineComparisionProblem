@@ -1,4 +1,4 @@
-public class Line {
+public class Line implements Comparable<Line> {
     Point p1;
     Point p2;
     double length;
@@ -27,5 +27,10 @@ public class Line {
 
         Line otherLine = (Line) obj;
         return Double.compare(this.length, otherLine.length) == 0;
+    }
+    //UC3
+    @Override
+    public int compareTo(Line otherLine) {
+        return Double.compare(this.length, otherLine.length);
     }
 }
