@@ -13,6 +13,13 @@ class LineComparison {
         Line line2=new Line(getPoint(),getPoint());
         length=line2.calculateLength();
         System.out.println("Length of the line 2 is: " + length);
+
+        //UC2
+        if(line.equals(line2)){
+            System.out.println("The two lines are the same");
+        }else{
+            System.out.println("The two lines are not the same");
+        }
     }
 
     public static Point getPoint() {

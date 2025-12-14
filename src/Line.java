@@ -16,4 +16,16 @@ public class Line {
 
         return length;
     }
+
+    //without override  it checks memory address
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+
+        Line otherLine = (Line) obj;
+        return Double.compare(this.length, otherLine.length) == 0;
+    }
 }
